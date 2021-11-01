@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+let url = "http://localhost:8000/api"
 
 @Component({
   selector: 'app-test',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class TestComponent implements OnInit {
 
-  constructor(private router: Router) {
+  constructor(private router: Router,) {
     let token = window.localStorage.getItem("token")
 
     if(token) {
@@ -19,7 +20,7 @@ export class TestComponent implements OnInit {
   ngOnInit(): void {
   }
  async logMessage(email:string,password:string,name:string,span:HTMLElement) {
-    let response = await fetch("http://localhost:8000/api/register",{
+    let response = await fetch(url+"/register",{
       method:"POST",
       headers: {
         'Accept': 'application/json',
