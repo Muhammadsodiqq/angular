@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<div class="toolbar" role="banner">
+  <h1>SignUp Page</h1>
+  <div id="wrapper">
+    <div class="close">
+      <a href="#"><i class="fa fa-times" aria-hidden="true"></i></a>
+    </div>
+    <div class="header">
+      <h1>Sign up</h1>
+      <span  style="background-color: red; color:white;font-family: Arial, Helvetica, sans-serif; border-radius: 20px; width: 100%; padding: 10px;display: none;" #danger></span>
+      <form  method="post">
+          <input type="email" required #email name="email" title="Email" placeholder="Email" />
+          <input type="password" required #pass name="pass" title="Password" placeholder="Password" />
+          <input type="text" required #name name="fname" title="First Name" placeholder="First Name" />
+          <div class="button">
+              <button type="submit" (click)="logMessage(email.value,pass.value,name.value,danger)" class="signup">Sign up</button>
+          </div>
+            <a routerLink="/login"  class="signup">Login</a>
+      </form>
+    </div>
+
+  </div>
+</div>
