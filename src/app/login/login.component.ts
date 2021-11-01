@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-let url = "http://localhost:8000/api"
+let url = "http://localhost:8000/"
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -19,7 +20,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
   async logMessage(email:string,password:string,span:HTMLElement) {
-    let response = await fetch(url+"/login",{
+    let response = await fetch(url+"api/login",{
       method:"POST",
       headers: {
         'Accept': 'application/json',
