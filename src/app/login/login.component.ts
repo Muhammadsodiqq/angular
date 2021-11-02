@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-let url = "http://localhost:8000/"
+let url = "https://testvazifa.na4u.ru/"
 
 @Component({
   selector: 'app-login',
