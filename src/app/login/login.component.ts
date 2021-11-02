@@ -32,7 +32,6 @@ export class LoginComponent implements OnInit {
       })
     })
     const content = await response.json();
-    console.log(content);
 
     if(!content.ok){
       span.style.display = 'block'
